@@ -1,0 +1,282 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Myriad Pro', sans-serif; /* Updated font family */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f4f4f4; /* Light background color */
+}
+
+.App-header {
+  background-color: #000; /* Black header */
+  padding: 20px 25px; /* Adjust padding for more space at the top and bottom */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between left and right parts */
+  color: white;
+  font-family: 'Myriad Pro', sans-serif; /* Updated font family */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.App-logo {
+  height: 40px; /* Adjust logo size */
+  margin-right: 10px; /* Add space between the logo and text */
+}
+
+.App-title {
+  color: #e6e6e6; /* Slightly brighter dull white color */
+  font-weight: 400;
+  font-size: 18px; /* Adjust font size to match logo */
+}
+
+.header-logo {
+  display: inline-block;
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+}
+
+.header-logo .logo-black-part {
+  filter: invert(100%);
+}
+
+.logout-icon {
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-left: 20px; /* Add space between the user logo and logout icon */
+}
+
+.user-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.App-content {
+  flex: 1;
+  padding: 20px 40px; /* Adjust padding to minimize space above input */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 400px; /* Set consistent max width for input groups */
+  padding: 5px 0; /* Reduce padding for less space between sections */
+}
+
+.input-label {
+  font-size: 1.2rem; /* Smaller font size */
+  color: #cc0000; /* Orange color similar to the reference */
+  display: block;
+  margin-bottom: 8px; /* Adjust spacing */
+  font-weight: 600; /* Match the font weight of the heading */
+}
+
+.input-text-short {
+  width: 100%; /* Adjust width to fill the container */
+  max-width: 400px; /* Make the input boxes the same size */
+  padding: 12px; /* Increase height */
+  font-size: 0.9rem; /* Smaller font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Add spacing between input fields */
+}
+
+.date-picker-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer; /* Change cursor to pointer for the entire date picker */
+}
+
+.date-picker-icon {
+  position: absolute;
+  right: -10px;
+  color: #cc0000;
+  font-size: 1.2rem;
+  pointer-events: none; /* Prevents the icon from interfering with clicks */
+}
+
+.SingleDatePicker {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  border: none; /* Remove border */
+  border-radius: 4px;
+}
+
+.SingleDatePickerInput {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.SingleDatePickerInput__input {
+  flex: 1;
+  padding: 12px; /* Increase height */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius */
+  font-size: 0.9rem; /* Smaller font size */
+  cursor: pointer;
+}
+
+.SingleDatePicker_picker {
+  z-index: 1000; /* Ensure the picker is above other elements */
+  cursor: pointer;
+}
+
+.SingleDatePickerInput__arrow {
+  display: none; /* Hide the arrow icon */
+  cursor: pointer;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add spacing below file input */
+}
+
+.input-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #cc0000;
+  border-radius: 4px;
+  background-color: #cc0000;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.input-file {
+  display: none; /* Hide the default file input */
+}
+
+.file-details {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.file-name {
+  margin-right: 10px;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+.delete-icon {
+  color: rgb(215, 0, 0);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.download-icon {
+  color: darkblue;
+  cursor: pointer;
+  font-size: 1rem;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.start-button {
+  background-color: #cc0000;
+  color: white;
+  padding: 7px 60px; /* Adjust padding to make the button wider */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Smaller font size */
+  margin-top: 20px; /* Add spacing above the start button */
+}
+
+.start-button:hover {
+  background-color: #b20000; /* Darker red on hover */
+}
+
+.download-button {
+  background-color: #000; /* Black button */
+  color: white;
+  padding: 7px 60px; /* Adjust padding to make the button wider */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Smaller font size */
+  margin-top: 20px; /* Add spacing above the download button */
+  text-decoration: none;
+  
+}
+
+.download-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background-color: #333; /* Darker black on hover */
+}
+
+.download-button-visible {
+  display: inline-block; /* Show the button when the link is ready */
+}
+
+.App-footer {
+  background-color: #000; /* Black footer */
+  color: white;
+  padding: 15px 0; /* Adjust padding */
+  text-align: center;
+  font-family: 'Myriad Pro', sans-serif; /* Updated font family */
+  margin-top: auto; /* Push footer to the bottom */
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.loading-spinner {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.loading-message {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
